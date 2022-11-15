@@ -30,8 +30,6 @@ def getImages(uPath):
     return uImages, count
 
 def bulkImageEnchancer(uPath, ePath, eTime, newBrightness, newSharpness, newContrast, numProcess):
-    pool = multiprocessing.Pool(numProcess)
-
     uImages, count = getImages(uPath)
 
     ePath = [ePath] * count
@@ -39,10 +37,9 @@ def bulkImageEnchancer(uPath, ePath, eTime, newBrightness, newSharpness, newCont
     newSharpness = [newSharpness] * count
     newContrast = [newContrast] * count
 
-    with multiprocessing.Pool() as pool:
+    with multiprocessing.Pool(numProcess) as pool:
         pool.starmap(enhanceImage, zip(uImages, ePath, newBrightness, newSharpness, newContrast))
     
-
 if __name__ == '__main__':
     bulkImageEnchancer(r'..\BulkImageEnhancer\unenhanced', r'..\BulkImageEnhancer\enhanced', 10, 2, 3, 4, 5)
 
