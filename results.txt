@@ -1,4 +1,4 @@
 folder location: ..\BulkImageEnhancer\enhanced
-number of images enhanced = 55
+number of images enhanced = 10
 total enhancing time = 0.25
-total elapsed time = 0.12765384912490846
+total elapsed time = 0.04421224594116211
