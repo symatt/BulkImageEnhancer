@@ -97,5 +97,5 @@ def bulkImageEnchancer(uPath, ePath, eTime, newBrightness, newSharpness, newCont
 
     
 if __name__ == '__main__':
-    bulkImageEnchancer(r'..\BulkImageEnhancer\unenhanced', r'..\BulkImageEnhancer\enhanced', 0.25, 2, 3, 4, 10)
+    bulkImageEnchancer(r'..\BulkImageEnhancer\unenhanced', r'..\BulkImageEnhancer\enhanced', 0.25, 2, 3, 4, 6)
 
